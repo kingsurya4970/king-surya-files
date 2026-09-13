@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King Surya Files</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-icon">👑</span>
+      <span class="brand-name">King Surya Files</span>
+    </div>
+    <div class="topbar-actions">
+      <a href="admin.html" class="admin-link">Admin</a>
+      <button id="themeToggle" class="icon-btn" title="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search files by name or description...">
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="documents">Documents</option>
+        <option value="images">Images</option>
+        <option value="archives">Archives</option>
+        <option value="media">Media</option>
+        <option value="data">Data</option>
+        <option value="other">Other</option>
+      </select>
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section id="status" class="status"></section>
+
+    <section id="fileGrid" class="file-grid"></section>
+  </main>
+
+  <div id="previewModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle"></h3>
+        <button id="modalClose" class="icon-btn">✕</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+      <div class="modal-footer">
+        <a id="modalDownload" class="btn btn-primary" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
